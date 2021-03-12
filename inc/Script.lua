@@ -4457,4 +4457,3 @@ if not redis:get('kar') then
    iclay = iclay,
    dclay = dclay,
    }
-  
