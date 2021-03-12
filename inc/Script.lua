@@ -2389,44 +2389,18 @@ return false
 end
 end
 
-end 
-
-if MsgText[1] == "السورس" or MsgText[1]=="سورس" then
-return 
-
-
-
-
-
-
-
-
-if text ==  "السورس"  or text ==  "سورس"  or text ==  "ياسورس"  or text ==  "يا سورس"  then
-local Text =[[
-* 𓆩 𝒘𝒆𝒍𝒄𝒐𝒎𝒆 𝒕𝒐 𝒔𝒐𝒖𝒓𝒄𝒆 𝒄𝒍𝒂𝒚 𓆪 *
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text =  قناه السورس , url="t.me/clayy1"},
-},
-{
-{text =  مطور السـورس , url="t.me/Q_Y_4"},
-},
-{
-{text =  مطور السـورس , url="t.me/mhzon1"},
-},
-{
-{text =  مطور السـورس , url="t.me/jokerrap2"},
-},
-{
-{text =  مطور السـورس , url="t.me/uu_ban"},
-},
+if text:match("^source$") or text:match("^اصدار$") or text:match("^الاصدار$") or  text:match("^السورس$") or text:match("^سورس$") and faeder11(msg) then 
+local inline = {
+{{text="- مطور السورس ،",url="t.me/jokerrap2"},
+{text="- مطور السورس،",url="t.me/mhzon1"}},
+{{text="- قناه السورس ،",url="t.me/clayy1"}},
+{{text="- تواصل ،",url="t.me/jokerrap2"},
+{text="- شروحات السورس ،",url="t.me/clayy1"}}
 }
-local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token.. /sendMessage?chat_id=  .. msg.chat_id_ ..  &text=  .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+send_inline(msg.chat_id_,'مرحبا بك في سورس كلاي┋clay ،\n☼↣اضغط على الازرار بالاسفل ⬇️ ،',nil,inline) 
+return false 
 end
-
+		
 if MsgText[1] == "التاريخ" then
 return "\n•  الـتـاريـخ : "..os.date("%Y/%m/%d")
 end
