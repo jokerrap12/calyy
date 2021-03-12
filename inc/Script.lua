@@ -2389,7 +2389,7 @@ return false
 end
 end
 
-if text:match("^source$") or text:match("^اصدار$") or text:match("^الاصدار$") or  text:match("^السورس$") or text:match("^سورس$") and faeder11(msg) then 
+if text:match("^source$") or text:match("^اصدار$") or text:match("^الاصدار$") or  text:match("^السورس$") or text:match("^سورس$") and clay(msg) then 
 local inline = {
 {{text="- مطور السورس ،",url="t.me/jokerrap2"},
 {text="- مطور السورس،",url="t.me/mhzon1"}},
